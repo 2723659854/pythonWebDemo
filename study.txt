@@ -1,0 +1,33 @@
+创建项目的命令：python -m django startproject MyFirstDjango
+为什么使用 python -m 而不是直接 django-admin？
+使用 python -m django 可以避免一些常见的路径和环境变量问题。因为它直接使用当前 Python 解释器的环境，这样可以确保你使用的 Django
+版本是与当前 Python 环境一致的。这特别有助于在使用虚拟环境时，确保命令使用的是虚拟环境中的包。
+
+===============================================================================
+启动服务
+python manage.py runserver 0.0.0.0:8000
+
+执行数据库迁移
+python manage.py migrate
+
+安装MySQL驱动
+pip install pymysql
+
+还需要安装MySQL客户端
+pip install mysqlclient
+
+创建一个新的模块
+python -m django startapp TestModel
+
+$ python3 manage.py migrate   # 创建表结构
+
+$ python3 manage.py makemigrations TestModel  # 让 Django 知道我们在我们的模型有一些变更
+$ python3 manage.py migrate TestModel   # 创建表结构
+
+命名空间（英语：Namespace）是表示标识符的可见范围。
+
+创建管理员
+python manage.py createsuperuser
+
+一个好的应用，依赖于强大的数据库结构，和数据处理算法。
+
